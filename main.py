@@ -11,7 +11,7 @@ import uvicorn
 app = FastAPI()
 
 # CORS를 없애기 위한 내 IP주소와 AWS 주소
-origins = ["http://18.205.219.133:8082", "http://18.205.219.133"]
+origins = ["http://18.205.219.133:8082/guestbook.html", "http://18.205.219.133"]
 
 app.add_middleware(
     CORSMiddleware,
