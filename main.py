@@ -47,4 +47,4 @@ if __name__ == '__main__':
     #  0.0.0.0은 보통 local host 주소를 의미
     # port = 포트 번호
     # reload = 파이썬 파일 저장 시 웹 사이트 정보 새로고침
-    uvicorn.run("main:app", host="0.0.0.0", port=8082, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8083, reload=True)
