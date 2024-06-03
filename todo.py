@@ -4,6 +4,8 @@
 from fastapi import APIRouter, Path
 # model.py 가져옴
 from model import Todo
+# 시간을 구하기 위해 사용
+from datetime import datetime
 
 # API Router 객체 생성
 todo_router = APIRouter()
@@ -22,6 +24,11 @@ async def add_todo(todo: Todo) -> dict:
     # id 자동 증가를 위한 코드
     global count
     todo.id = count = count + 1
+
+    # 시간 자동 추가를 위한 코드
+    now = datetime.now()
+    todo.time = str(now)
+    
     todo_list.append(todo)
     return {
         "msg" : "todo added successfully"
